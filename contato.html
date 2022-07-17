@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contato - Barbearia Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1>
+                    <!--alt = alternativa, descrever a imagem, acessibilidade-->
+                    <img src="imagens/logo.png" alt="Logo da Barbearia Alura">
+                </h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!-- form é a tag de formulário / quando o usuário está entrando com algum dado ele está entrando com um input / todo o input tem que ter um tipo/ dentro do formulário usamos uma etiqueta para o input que seria um label -->
+            <!--input geralmente é único e no label usamos o for para mencionar o input especifico / required diz que aquele campo precisa ser preenchido/placeholder está ocupando aquele espaço até alguem começar a digitar-->
+            <form>
+                <label for="nomesobrenome">Nome e Sobrenome</label>
+                <input type="text" id="nomesobrenome" class="input-padrao">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-padrao" required required placeholder="seuemail@dominio.com">
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+                <!--textarea é uma tag de conteúdo onde permite que o usuário bote mais de uma linha de texto, onde posso configurar quantas linhas e de colunas que o campo vai ter-->
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="60" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+                <!--A tag fieldset é referente a configuração de campos referente a um assunto especifico, como preenchimento de dados de cartão de crédito ou endereço-->
+                <!-- dentro de um fieldset não tempos paragrafo, utilizamos legend-->
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+                    <!--radiobox, input tem a configuração de serem 3 opções referentes a um único campo / value é o valor do input e não o texto que ta aparencendo / precisam fazer parte de um grupo p/ selecionar 1 e o outro desclicar usando o name-->
+                    <!--checked = ao carregar a pagina, aquela opção já está marcada-->
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                    
+
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                    
+
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                    
+                </fieldset>
+                <!--O select tem dentro dele varias opções, opções são o campo de conteúdo-->
+                <fieldset>
+                    <legend>Qual o horário prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                <!--Adicionando um input dentro do label-->
+                <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+                <!--input submit é o input que envia os dados-->
+                <input type="submit" value="Enviar Formulário" class="enviar">
+            </form>
+            <!--tabela onde as linhas são tr e colunas são td-->
+            <table>
+                <!--cabeçalho é marcado pelo thead / dentro do cabeçalho para dizer que a celula é uma celula do cabeçalho usamos o th-->
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <!--Corpo da tabela é o tbody-->
+                <tbody>
+                    <tr>
+                        <td>Segunda</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <img src="imagens/logo-branco.png" alt="Logo da Barbearia Alura">
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+        </footer>
+    </body>
+</html>
